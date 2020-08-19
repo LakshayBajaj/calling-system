@@ -1,0 +1,17 @@
+.horizontal {
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+.horizontal::-webkit-scrollbar {
+    display: none;
+}
+.vertical{
+    margin: 1%;
+    height: 35vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.vertical::-webkit-scrollbar {
+    display: none;
+}
