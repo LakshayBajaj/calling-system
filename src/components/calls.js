@@ -22,8 +22,8 @@ export default function Calls() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container style={{overflow: 'hidden'}} maxWidth="sm">
-        <Box border={2} component="div" style={{ backgroundColor: '#fff', height: '50vh' }}>
+      <Container style={{overflow: 'hidden'}}>
+        <Box border={2} component="div" style={{ backgroundColor: '#fff', height:'100%' }}>
         <Typography style={{paddingLeft: '5%',paddingTop: '2%'}} variant="h6">
         911 Calls
       </Typography>

@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Calls from './components/calls';
+import CallLists from './components/call-lists';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Calls />
+    <Calls style={{margin:'2% 0'}} />
+    <CallLists />
   </React.StrictMode>,
   document.getElementById('root')
 );

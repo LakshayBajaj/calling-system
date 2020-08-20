@@ -33,18 +33,17 @@ export default function CallsCard() {
                 </Typography>
                 
               </Grid>
-              <Grid xs={3} item >
+              <Grid align="right" xs={3} item >
               
               <PhoneIcon style={{backgroundColor: 'lightblue', borderRadius: '100%', marginTop:'5%', padding: '4%', fontSize:'50'}} />
               <Button style={{margin:'5%',padding:'10% 0', bottom:'2.5vh' }} size='small' variant="contained">Info</Button>
               
               
-              <Typography align="right"  variant="subtitle2" gutterBottom>
+              <Typography variant="subtitle2" gutterBottom>
                     Resp: 3 Sec
                 </Typography>                
               </Grid>
             </Grid>
-             
         </Box>
     )
 }
