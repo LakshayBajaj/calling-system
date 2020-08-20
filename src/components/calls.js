@@ -23,8 +23,8 @@ export default function Calls() {
     <React.Fragment>
       <CssBaseline />
       <Container style={{overflow: 'hidden'}}>
-        <Box border={2} component="div" style={{ backgroundColor: '#fff', height:'100%' }}>
-        <Typography style={{paddingLeft: '5%',paddingTop: '2%'}} variant="h6">
+        <Box border={2} component="div" style={{maxHeight:'500px', backgroundColor: '#fff'}}>
+        <Typography style={{fontSize:'2vw', paddingLeft: '5%',paddingTop: '2%'}} variant="h6">
         911 Calls
       </Typography>
         <Box className='horizontal' container spacing={1}>
@@ -33,14 +33,14 @@ export default function Calls() {
             <Button variant="outlined">Monitor</Button>
             <Button variant="outlined">Whisper</Button>
             <Button variant="outlined">Abandoned Callback</Button>
-            <Button variant="outlined">Join</Button>
-            <Button variant="outlined">Monitor</Button>
-            <Button variant="outlined">Whisper</Button>
-            <Button variant="outlined">Abandoned Callback</Button>
           </Grid>
         </Box>               
       
         <Box className='vertical' border={1} item spacing={1}>
+          <CallsCard />
+          <CallsCard />
+          <CallsCard />
+          <CallsCard />
           <CallsCard />
           <CallsCard />
           <CallsCard />

@@ -9,7 +9,6 @@ import CallLists from './components/call-lists';
 ReactDOM.render(
   <React.StrictMode>
     <Calls style={{margin:'2% 0'}} />
-    <CallLists />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -10,6 +10,7 @@
     margin: 1%;
     overflow: scroll;
     overflow-x: hidden;
+    max-height: 300px;
 }
 .vertical::-webkit-scrollbar {
     display: none;

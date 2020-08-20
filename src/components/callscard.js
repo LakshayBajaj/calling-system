@@ -5,30 +5,45 @@ import Typography from '@material-ui/core/Typography';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import PhoneIcon from '@material-ui/icons/Phone';
 import Button from '@material-ui/core/Button';
+import { makeStyles, createStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles((theme: Theme) => createStyles({
+    text: {
+        [theme.breakpoints.down('xs')]: {
+            fontSize:'12px',
+          },
+        [theme.breakpoints.down('sm')]: {
+            fontSize:'20px',
+          },
+        [theme.breakpoints.up('md')]: {
+            fontSize:'22px',
+          },
+    }
+  }));  
 
 export default function CallsCard() {
+    const classes = useStyles();
     return (
-        <Box  style={{margin: '2% 1%', padding: '1%'}} border={1}>
+        <Box style={{padding: '1%'}} border={1}>
             <Grid container>
-              <Grid xs={3} item spacing={1}>
-                <Typography variant="subtitle2" gutterBottom>
+              <Grid xs={3} item>
+                <Typography className={classes.text}  gutterBottom>
                     SOS Voice
                 </Typography>
-                <FiberManualRecordIcon style={{color:'green',fontSize:"40" }} />
+                <FiberManualRecordIcon style={{color:'green', fontSize:'45px' }} />
                 <PhoneIcon fontSize="large" />
-                <Typography variant="subtitle2" gutterBottom>
+                <Typography className={classes.text}  gutterBottom>
                     5 Mins
                 </Typography>
-
               </Grid>
               <Grid xs={6} item spacing={1}>
-              <Typography variant="subtitle2" gutterBottom>
+              <Typography className={classes.text}  gutterBottom>
                     Mike Tedder - 80 Main NC, New Canaan
                 </Typography>
-                <Typography variant="subtitle2" gutterBottom>
+                <Typography className={classes.text}  gutterBottom>
                     Test 911 Call
                 </Typography>
-                <Typography variant="subtitle2" gutterBottom>
+                <Typography className={classes.text}  gutterBottom>
                     Tarun, Mike , +1 99999 99999
                 </Typography>
                 
@@ -39,7 +54,7 @@ export default function CallsCard() {
               <Button style={{margin:'5%',padding:'10% 0', bottom:'2.5vh' }} size='small' variant="contained">Info</Button>
               
               
-              <Typography variant="subtitle2" gutterBottom>
+              <Typography className={classes.text}  gutterBottom>
                     Resp: 3 Sec
                 </Typography>                
               </Grid>
