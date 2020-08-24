@@ -34,7 +34,7 @@ class  CallsCard extends Component {
 
   boxClick = (e) => {
     this.setState({
-      borderColor: "lightblue",
+      borderColor: "lightgrey",
       borderWidth: '5px'
     })
   }
@@ -42,7 +42,7 @@ class  CallsCard extends Component {
       const { classes } = this.props;
     
     return (
-        <Box style={{padding: '1%',borderColor: this.state.borderColor, borderWidth: this.state.borderWidth}} onClick={this.boxClick} border={1}>
+        <Box style={{padding: '1%',backgroundColor: this.state.borderColor, borderWidth: this.state.borderWidth}} onClick={this.boxClick} border={1}>
             <Grid container>
               <Grid xs={3} item>
                 <Typography className={classes.text}  gutterBottom>

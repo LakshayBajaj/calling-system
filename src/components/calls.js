@@ -23,7 +23,7 @@ export default function Calls() {
     <React.Fragment>
       <CssBaseline />
       <Container style={{overflow: 'hidden'}}>
-        <Box border={2} component="div" style={{maxHeight:'500px', backgroundColor: '#fff'}}>
+        <Box border={2} component="div" style={{minHeight:'800px', backgroundColor: '#fff'}}>
         <Typography style={{fontSize:'2vw', paddingLeft: '5%',paddingTop: '2%'}} variant="h6">
         911 Calls
       </Typography>
@@ -36,7 +36,7 @@ export default function Calls() {
           </Grid>
         </Box>               
       
-        <Box className='vertical' border={1} item spacing={1}>
+        <Box style={{height:'100%'}} className='vertical' border={1} item spacing={1}>
           <CallsCard />
           <CallsCard />
           <CallsCard />
