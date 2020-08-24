@@ -1,30 +1,48 @@
-import React from 'react';
+import React,{Component} from 'react'
 import { Box } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import PhoneIcon from '@material-ui/icons/Phone';
 import Button from '@material-ui/core/Button';
-import { makeStyles, createStyles } from '@material-ui/core/styles'
+import { withStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
+
+  const styles = theme => ({
     text: {
-        [theme.breakpoints.down('xs')]: {
-            fontSize:'12px',
-          },
-        [theme.breakpoints.down('sm')]: {
-            fontSize:'20px',
-          },
-        [theme.breakpoints.up('md')]: {
-            fontSize:'22px',
-          },
-    }
-  }));  
+      [theme.breakpoints.down('xs')]: {
+          fontSize:'12px',
+        },
+      [theme.breakpoints.down('sm')]: {
+          fontSize:'20px',
+        },
+      [theme.breakpoints.up('md')]: {
+          fontSize:'22px',
+        },
+  }
+  });
 
-export default function CallsCard() {
-    const classes = useStyles();
+class  CallsCard extends Component {
+ 
+  constructor(props) {
+    super(props);
+    this.state = {
+      bgColor: ""
+    }
+  }
+
+
+  boxClick = (e) => {
+    this.setState({
+      borderColor: "lightblue",
+      borderWidth: '5px'
+    })
+  }
+    render() {
+      const { classes } = this.props;
+    
     return (
-        <Box style={{padding: '1%'}} border={1}>
+        <Box style={{padding: '1%',borderColor: this.state.borderColor, borderWidth: this.state.borderWidth}} onClick={this.boxClick} border={1}>
             <Grid container>
               <Grid xs={3} item>
                 <Typography className={classes.text}  gutterBottom>
@@ -61,4 +79,7 @@ export default function CallsCard() {
             </Grid>
         </Box>
     )
+    }
 }
+
+export default withStyles(styles)(CallsCard);
